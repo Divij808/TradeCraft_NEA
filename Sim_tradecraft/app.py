@@ -3,8 +3,8 @@
 import datetime
 import sqlite3
 from models import list_companies, COMPANIES, validate_password, validate_email
-from collecting_live_price import update_live_prices_in_json
-from collecting_live_price_JSON import live_price
+from collecting_live_price import update_live_prices_in_json,live_price
+
 from flask import Flask, render_template, session, redirect, url_for, jsonify
 from flask import request, flash
 from werkzeug.security import generate_password_hash, check_password_hash

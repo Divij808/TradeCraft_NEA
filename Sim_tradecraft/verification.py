@@ -1,20 +1,22 @@
 import math, random
 
-# function to generate OTP
-def generateOTP() :
 
+# function to generate OTP
+def generateOTP():
     # Declare a digits variable
     # which stores all digits
     digits = "0123456789"
     OTP = ""
 
-   # length of password can be changed
-   # by changing value in range
-    for i in range(6) :
+    # length of password can be changed
+    # by changing value in range
+    for i in range(6):
         OTP += digits[math.floor(random.random() * 10)]
 
     return OTP
-def send_verification_email(email,message):
+
+
+def send_verification_email(email, message):
     import smtplib, ssl
 
     port = 587  # For starttls
@@ -23,8 +25,7 @@ def send_verification_email(email,message):
     receiver_email = email
     password = "qagc rspz kwtu crnr"
 
-
-     # Create a secure SSL context
+    # Create a secure SSL context
 
     context = ssl.create_default_context()
     with smtplib.SMTP(smtp_server, port) as server:

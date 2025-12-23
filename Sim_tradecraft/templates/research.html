@@ -404,7 +404,6 @@
     <div class="card">
       <h2>{{ c.symbol }} — {{ c.name }}</h2>
       <h3>{{ c.sector }}</h3>
-      <p>Base price: ${{ '%.2f'|format(c.base_price) }}</p>
       <p>Live quote: <span id="q_{{ c.symbol }}">{{ '%.2f'|format(c.live_price) if c.live_price else 'N/A' }}</span></p>
 
       <form method="post" action="{{ url_for('trade') }}">

@@ -36,7 +36,6 @@ for c in raw_companies:
         "symbol": symbol,
         "title": c.get("name", symbol),
         "logo": c.get("image", ""),
-        "base_price": c.get("base_price", 100.0),
     }
 
 
